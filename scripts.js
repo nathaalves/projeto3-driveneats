@@ -9,5 +9,22 @@ function selectOption(option) {
     
     option.classList.add("selectedOption");
     option.querySelector("ion-icon").classList.add("checkedOption")
+
+    enabledOrder = document.querySelectorAll(".selectedOption").length === 3
+    if (enabledOrder) {
+      activeButton = document.querySelector(".button")
+      activeButton.classList.add("activeButton")
+    }
+
+    
+}
+
+function finalizeOrder() {
+
+  enabledOrder = document.querySelectorAll(".selectedOption").length === 3
+  if (enabledOrder) {
+    alert("funciona")
+  }
+  
 }
 
