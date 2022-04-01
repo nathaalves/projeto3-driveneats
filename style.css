@@ -99,11 +99,6 @@ section nav {
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25);
 }
 
-.selectedOption {
-    padding: 13px 9px 9px 9px;
-    border: 5px solid green;
-}
-
 .option h3 {
     font-weight: 700;
     font-size: 16px;
@@ -128,6 +123,22 @@ section nav {
     margin-top: 7px;
 }
 
+.unchecked-option {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: white;
+}
+
+.selectedOption {
+    padding: 13px 9px 9px 9px;
+    border: 5px solid green;
+}
+
+.checkedOption {
+    color: green;
+}
+
 .footer {
     display: flex;
     justify-content: center;
@@ -143,7 +154,6 @@ section nav {
 }
 
 .button {
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -153,9 +163,8 @@ section nav {
     border-radius: 50px;
     background-color: #CBCBCB;
     box-shadow: 0;
-}
 
-.button span {
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 23px;
@@ -163,17 +172,7 @@ section nav {
     color: #FFFFFF;
 }
 
-.unchecked-option {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    color: white;
-}
-
-.checkedOption {
-    color: green;
-}
-
 .activeButton {
     background-color: green;
+    font-weight: 700;
 }
