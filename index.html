@@ -96,8 +96,31 @@
         </section>
     </main>
     <footer class="footer">
-        <a class="button" onclick="finalizeOrder()" target="_black">Selecionar os 3 itens<br>para fechar o pedido</a>
+        <a class="button" onclick="reviewOrder()" target="_black">Selecionar os 3 itens<br>para fechar o pedido</a>
     </footer>
+    <div class="confirm-order">
+        <div class="container-confirm-order">
+            <h2>Confirme seu pedido</h2>
+            <div>
+                <span>Dishe</span>
+                <span>DisheValue</span>
+            </div>
+            <div>
+                <span>Drink</span>
+                <span>DrinkValue</span>
+            </div>
+            <div>
+                <span>Dessert</span>
+                <span>DessertValue</span>
+            </div>
+            <div class="total-price">
+                <span>TOTAL</span>
+                <span>TotalValue</span>
+            </div>
+            <a href="" target="_blank" onclick="finalizeOrder()"><h2>Tudo certo, pode pedir!</h2></a>
+            <h3 onclick="cancelOrder()">Cancelar</h3>
+        </div>
+    </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="scripts.js"></script>
 </body>
