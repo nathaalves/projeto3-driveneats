@@ -1,12 +1,12 @@
-let enabledOrder
+let enabledOrder = false
 
 function selectOption(option) {
 
-  const selected = document.querySelector(`.${option.parentElement.className} .selectedOption`);
+  const selected = document.querySelector(`.${option.parentElement.className} .selectedOption`)
   const checked = document.querySelector(`.${option.parentElement.className} .checkedOption`)
   if (selected !== null) {
-    selected.classList.remove("selectedOption");
-    checked.classList.remove("checkedOption");
+    selected.classList.remove("selectedOption")
+    checked.classList.remove("checkedOption")
   }
   
   option.classList.add("selectedOption");
@@ -21,13 +21,13 @@ function selectOption(option) {
 
 }
 
-let dishe = "";
-let dishePrice = 0;
-let drink = "";
-let drinkPrice = 0;
-let dessert = "";
-let dessertPrice = 0;
-let totalPrice = "";
+let dishe = ""
+let dishePrice = 0
+let drink = ""
+let drinkPrice = 0
+let dessert = ""
+let dessertPrice = 0
+let totalPrice = ""
 
 function reviewOrder() {
 
@@ -44,15 +44,15 @@ function reviewOrder() {
     drinkPrice = Number(selected[1].querySelector("span").innerHTML.replace(",", "."))
     dessert = selected[2].querySelector("h3").innerHTML
     dessertPrice = Number(selected[2].querySelector("span").innerHTML.replace(",", "."))
-    totalPrice = (dishePrice + drinkPrice + dessertPrice).toFixed(2)
+    totalPrice = (dishePrice + drinkPrice + dessertPrice).toFixed(2).replace(".", ",")
 
     const orderInformations = document.querySelectorAll(".container-confirm-order span")
     orderInformations[0].innerHTML = dishe
-    orderInformations[1].innerHTML = dishePrice.toFixed(2)
+    orderInformations[1].innerHTML = dishePrice.toFixed(2).replace(".", ",")
     orderInformations[2].innerHTML = drink
-    orderInformations[3].innerHTML = drinkPrice.toFixed(2)
+    orderInformations[3].innerHTML = drinkPrice.toFixed(2).replace(".", ",")
     orderInformations[4].innerHTML = dessert
-    orderInformations[5].innerHTML = dessertPrice.toFixed(2)
+    orderInformations[5].innerHTML = dessertPrice.toFixed(2).replace(".", ",")
     orderInformations[7].innerHTML = totalPrice
 
   }
